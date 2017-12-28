@@ -90,7 +90,17 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Scripts\Controller\EnemyController.cs" />
+    <Compile Include="Assets\Scripts\Controller\GameStateController.cs" />
+    <Compile Include="Assets\Scripts\GameFacade.cs" />
+    <Compile Include="Assets\Scripts\Model\DropItemData.cs" />
+    <Compile Include="Assets\Scripts\Model\EnemyData.cs" />
+    <Compile Include="Assets\Scripts\Model\GameStateData.cs" />
+    <Compile Include="Assets\Scripts\Model\LevelData.cs" />
+    <Compile Include="Assets\Scripts\Model\PlayerData.cs" />
+    <Compile Include="Assets\Scripts\Model\StageData.cs" />
     <Compile Include="Assets\Scripts\View\Behavior\EnemyBehavior.cs" />
+    <Compile Include="Assets\Scripts\View\Component\BarTextDisplay.cs" />
     <Compile Include="Assets\Scripts\View\Component\HealthComponent.cs" />
     <Compile Include="Assets\Scripts\View\Component\MeshFader.cs" />
   </ItemGroup>

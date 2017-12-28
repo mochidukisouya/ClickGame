@@ -19,7 +19,7 @@ public class HealthComponent : MonoBehaviour {
 
     
     public void Init(int maxHealth) {
-
+        
         healthSlider.maxValue = maxHealth;
         healthSlider.value = healthSlider.maxValue;
         currentHealth = (int)healthSlider.maxValue;
