@@ -11,10 +11,12 @@ public class EnemyBehavior : MonoBehaviour {
     private Animator animator;
     private AudioSource audioSource;
     private HealthComponent healthComponent;
+    private PlayerController playerController;
     [SerializeField]
     private AudioClip hurtClip;
     [SerializeField]
     private AudioClip deadClip;
+    public Transform hitPoint;
 
     public bool IsDead {
         get {
@@ -28,6 +30,7 @@ public class EnemyBehavior : MonoBehaviour {
         meshFader = GetComponent<MeshFader>();
         audioSource = GetComponent<AudioSource>();
         healthComponent = GetComponent<HealthComponent>();
+        playerController = GameFacade.GetInstance().playerController;
 
     }
     private void OnEnable() {
@@ -38,10 +41,10 @@ public class EnemyBehavior : MonoBehaviour {
     [ContextMenu("test")]
     private void test()
     {
-        StartCoroutine(Execute());
+       // StartCoroutine(Execute());
     }
-    public IEnumerator Execute() {
-        healthComponent.Init(100);
+    public IEnumerator Execute(EnemyData data) {
+        healthComponent.Init(data.health);
 
         while (IsDead == false){
             yield return null;
@@ -65,12 +68,22 @@ public class EnemyBehavior : MonoBehaviour {
     {
         if (IsDead)
             return;
+#region
+#if UNITY_EDITOR
         if (Input.GetButtonDown("Fire1"))
-            DoDamage(10);
+            playerController.OnClick(this);
+#else
+        if (Input.touchCount > 0) {
+            for (int i = 0; i < Input.touchCount; i++) {
+                if (Input.GetTouch(i).phase == TouchPhase.Began) {
+                    playerController.OnClick(this);
+
+                }
+            }
+        }
+#endif
     }
-
-
-
+#endregion
 
 
 }

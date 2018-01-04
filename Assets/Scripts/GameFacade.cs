@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 [RequireComponent(typeof(EnemyController))]
 [RequireComponent(typeof(GameStateController))]
+[RequireComponent(typeof(PlayerController))]
 public class GameFacade : MonoBehaviour {
     private static GameFacade instance;
 
@@ -20,17 +21,20 @@ public class GameFacade : MonoBehaviour {
     #region Controller
     public EnemyController EnemyController { private set; get; }
     public GameStateController GameStateController { private set; get; }
+    public PlayerController playerController { private set; get; }
     #endregion
     #region Model
     public StageData[] stageDatas;
     public PlayerData playerData;
     public GameStateData gameStateData;
+    public LevelData levelData;
     #endregion
 
     private void Initalize() {
         Debug.Log("[GameFacade] Initalize");
         EnemyController = GetComponent<EnemyController>();
         GameStateController= GetComponent<GameStateController>();
+        playerController = GetComponent<PlayerController>();
         playerData = new PlayerData();
         gameStateData = new GameStateData();
 

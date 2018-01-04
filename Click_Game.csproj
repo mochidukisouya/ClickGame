@@ -92,6 +92,7 @@
   <ItemGroup>
     <Compile Include="Assets\Scripts\Controller\EnemyController.cs" />
     <Compile Include="Assets\Scripts\Controller\GameStateController.cs" />
+    <Compile Include="Assets\Scripts\Controller\PlayerController.cs" />
     <Compile Include="Assets\Scripts\GameFacade.cs" />
     <Compile Include="Assets\Scripts\Model\DropItemData.cs" />
     <Compile Include="Assets\Scripts\Model\EnemyData.cs" />
