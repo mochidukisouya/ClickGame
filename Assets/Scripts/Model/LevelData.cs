@@ -23,6 +23,13 @@ public class LevelData :ScriptableObject {
 
 
     }
+    public LevelSetting LastLevelSetting {
+        get {
+            int LV = GameFacade.GetInstance().playerData.LV;
+            int index = Mathf.Max(LV - 2, 0);
+            return levelSettings[index];
 
+        }
+    }
 
 }

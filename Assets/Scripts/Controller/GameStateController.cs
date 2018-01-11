@@ -4,9 +4,11 @@ using UnityEngine;
 
 public class GameStateController : MonoBehaviour {
     private EnemyController enemyController;
+    private GameStateData gameStateData;
     public void Awake() {
         Input.multiTouchEnabled = true;
         enemyController = GameFacade.GetInstance().EnemyController;
+        gameStateData = GameFacade.GetInstance().gameStateData;
 
     }
     private IEnumerator Start() {
@@ -22,6 +24,7 @@ public class GameStateController : MonoBehaviour {
     }
     private IEnumerator EndPhase() {
         Debug.Log("[GameStataController] EndPhase");
+        gameStateData.NextStage();
         yield return null;
     }
 }

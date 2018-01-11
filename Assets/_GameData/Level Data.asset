@@ -12,27 +12,30 @@ MonoBehaviour:
   m_Name: Level Data
   m_EditorClassIdentifier: 
   levelSettings:
-  - EXP: 0
+  - EXP: 50
+    ATK: 5
+    hitEffect: {fileID: 198199364656435864, guid: 3579fa18583093041bb9f5121e89159e,
+      type: 2}
+  - EXP: 200
     ATK: 10
     hitEffect: {fileID: 198199364656435864, guid: 3579fa18583093041bb9f5121e89159e,
       type: 2}
-  - EXP: 10
-    ATK: 10
+  - EXP: 450
+    ATK: 20
     hitEffect: {fileID: 198179774297216014, guid: 0571ddf4e7577274a9acbc5be94a4066,
       type: 2}
-  - EXP: 20
-    ATK: 5
+  - EXP: 600
+    ATK: 35
+    hitEffect: {fileID: 198179774297216014, guid: 0571ddf4e7577274a9acbc5be94a4066,
+      type: 2}
+  - EXP: 1000
+    ATK: 100
     hitEffect: {fileID: 198635770447775954, guid: 2bc6ba5a6cebbce47bdd834030be501b,
       type: 2}
-  - EXP: 30
-    ATK: 10
-    hitEffect: {fileID: 0}
-  - EXP: 40
-    ATK: 20
-    hitEffect: {fileID: 0}
-  - EXP: 0
-    ATK: 0
-    hitEffect: {fileID: 0}
+  - EXP: 1500
+    ATK: 150
+    hitEffect: {fileID: 198635770447775954, guid: 2bc6ba5a6cebbce47bdd834030be501b,
+      type: 2}
   - EXP: 0
     ATK: 0
     hitEffect: {fileID: 0}

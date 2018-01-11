@@ -18,19 +18,25 @@ MonoBehaviour:
     defeatTimeLimit: 100
     enemyPrefab: {fileID: 114642975145112482, guid: c7e6d0dea441efb409d0faf991a8281b,
       type: 2}
-  - health: 100
+  - health: 60
     willDropItemID: 0
     dropProbability: 0
     defeatTimeLimit: 100
     enemyPrefab: {fileID: 114293479592629656, guid: e706b6f3584657f4789cc87f3586ab77,
       type: 2}
-  - health: 300
+  - health: 150
     willDropItemID: 0
     dropProbability: 0
     defeatTimeLimit: 100
     enemyPrefab: {fileID: 114550858311369604, guid: e011706cfa551724f8039b1f775ba24d,
       type: 2}
   - health: 1000
+    willDropItemID: 0
+    dropProbability: 0
+    defeatTimeLimit: 100
+    enemyPrefab: {fileID: 114938725951282196, guid: cfc60a92508cc9a4488ed5d78c67186f,
+      type: 2}
+  - health: 2000
     willDropItemID: 0
     dropProbability: 0
     defeatTimeLimit: 100

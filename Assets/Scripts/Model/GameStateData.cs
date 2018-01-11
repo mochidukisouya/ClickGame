@@ -11,6 +11,13 @@ public class GameStateData {
             return GameFacade.GetInstance().stageDatas[playerData.StageIndex];
         }
 
+
+    }
+    public void NextStage() {
+        PlayerData playerData = GameFacade.GetInstance().playerData;
+        StageData[] stageDatas = GameFacade.GetInstance().stageDatas;
+        playerData.StageIndex = Mathf.Min(playerData.StageIndex + 1, stageDatas.Length-1);
+
     }
 
 }
